@@ -68,420 +68,412 @@ bot.on('follow', async event => {
   try {
     let reply = ''
     reply = {
-      type: 'flex',
-      altText: 'Flex',
-      contents: {
-        type: 'carousel',
-        contents: [
-          {
-            type: 'bubble',
-            hero: {
-              type: 'image',
-              url: 'https://i.imgur.com/pXBdhCI.png',
-              size: 'full',
-              aspectRatio: '3:2',
-              aspectMode: 'cover',
-              action: {
-                type: 'uri',
-                uri: 'http://linecorp.com/'
+      "type": "carousel",
+      "contents": [
+        {
+          "type": "bubble",
+          "hero": {
+            "type": "image",
+            "url": "https://i.imgur.com/pXBdhCI.png",
+            "size": "full",
+            "aspectRatio": "3:2",
+            "aspectMode": "cover"
+          },
+          "body": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "歷古嚦咕 LI-GU",
+                "weight": "bold",
+                "size": "xl",
+                "align": "center"
+              },
+              {
+                "type": "text",
+                "size": "sm",
+                "text": "歡迎加入 ❛歷古嚦咕 ❜  │ 使用說明",
+                "align": "center"
+              },
+              {
+                "type": "box",
+                "layout": "vertical",
+                "margin": "lg",
+                "spacing": "sm",
+                "contents": [
+                  {
+                    "type": "box",
+                    "layout": "baseline",
+                    "spacing": "sm",
+                    "contents": [
+                      {
+                        "type": "icon",
+                        "size": "sm",
+                        "url": "https://i.imgur.com/HFeV88n.png"
+                      },
+                      {
+                        "type": "text",
+                        "text": "輸入關鍵字",
+                        "size": "md",
+                        "flex": 1,
+                        "weight": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                      {
+                        "type": "text",
+                        "text": "直接輸入想要查詢的古蹟或歷史建築名稱，例如：「赤嵌樓」。",
+                        "wrap": true
+                      }
+                    ]
+                  },
+                  {
+                    "type": "box",
+                    "layout": "vertical",
+                    "margin": "lg",
+                    "spacing": "sm",
+                    "contents": [
+                      {
+                        "type": "box",
+                        "layout": "baseline",
+                        "spacing": "sm",
+                        "contents": [
+                          {
+                            "type": "icon",
+                            "size": "sm",
+                            "url": "https://i.imgur.com/0Ymtg9N.png"
+                          },
+                          {
+                            "type": "text",
+                            "text": "輸入指令",
+                            "size": "md",
+                            "flex": 1,
+                            "weight": "bold"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [
+                          {
+                            "type": "text",
+                            "text": "@help",
+                            "margin": "none",
+                            "decoration": "none"
+                          },
+                          {
+                            "type": "text",
+                            "text": "▸ 顯示此訊息。"
+                          },
+                          {
+                            "type": "text",
+                            "text": "@hs + 關鍵字",
+                            "margin": "md"
+                          },
+                          {
+                            "type": "text",
+                            "text": "▸ 查詢背景含有關鍵字的古蹟。",
+                            "wrap": true
+                          },
+                          {
+                            "type": "text",
+                            "text": "@hb + 關鍵字",
+                            "margin": "md"
+                          },
+                          {
+                            "type": "text",
+                            "text": "▸ 查詢背景含有關鍵字的歷史建築。",
+                            "wrap": true
+                          }
+                        ],
+                        "margin": "sm"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "box",
+                    "layout": "vertical",
+                    "margin": "lg",
+                    "spacing": "sm",
+                    "contents": [
+                      {
+                        "type": "box",
+                        "layout": "baseline",
+                        "spacing": "sm",
+                        "contents": [
+                          {
+                            "type": "icon",
+                            "size": "sm",
+                            "url": "https://i.imgur.com/62PSmkz.png"
+                          },
+                          {
+                            "type": "text",
+                            "text": "發送位置資訊 ‒ 打卡",
+                            "size": "md",
+                            "flex": 1,
+                            "weight": "bold"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [
+                          {
+                            "type": "text",
+                            "text": "根據所在地或打卡位置查詢附近的古蹟。",
+                            "margin": "none",
+                            "wrap": true
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
               }
-            },
-            body: {
-              type: 'box',
-              layout: 'vertical',
-              contents: [
-                {
-                  type: 'text',
-                  text: '歷古嚦咕 LI-GU',
-                  weight: 'bold',
-                  size: 'xl',
-                  align: 'center'
-                },
-                {
-                  type: 'text',
-                  size: 'sm',
-                  text: '歡迎加入 ❛歷古嚦咕 ❜  │ 使用說明',
-                  align: 'center'
-                },
-                {
-                  type: 'box',
-                  layout: 'vertical',
-                  margin: 'lg',
-                  spacing: 'sm',
-                  contents: [
-                    {
-                      type: 'box',
-                      layout: 'baseline',
-                      spacing: 'sm',
-                      contents: [
-                        {
-                          type: 'icon',
-                          size: 'sm',
-                          url: 'https://i.imgur.com/HFeV88n.png'
-                        },
-                        {
-                          type: 'text',
-                          text: '輸入關鍵字',
-                          size: 'md',
-                          flex: 1,
-                          weight: 'bold'
-                        }
-                      ]
-                    },
-                    {
-                      type: 'box',
-                      layout: 'vertical',
-                      contents: [
-                        {
-                          type: 'text',
-                          text: '直接輸入想要查詢的古蹟或歷史建築名稱，例如：「赤嵌樓」。',
-                          wrap: true
-                        }
-                      ]
-                    },
-                    {
-                      type: 'box',
-                      layout: 'vertical',
-                      margin: 'lg',
-                      spacing: 'sm',
-                      contents: [
-                        {
-                          type: 'box',
-                          layout: 'baseline',
-                          spacing: 'sm',
-                          contents: [
-                            {
-                              type: 'icon',
-                              size: 'sm',
-                              url: 'https://i.imgur.com/0Ymtg9N.png'
-                            },
-                            {
-                              type: 'text',
-                              text: '輸入指令',
-                              size: 'md',
-                              flex: 1,
-                              weight: 'bold'
-                            }
-                          ]
-                        },
-                        {
-                          type: 'box',
-                          layout: 'vertical',
-                          contents: [
-                            {
-                              type: 'text',
-                              text: '@help',
-                              margin: 'none',
-                              decoration: 'none'
-                            },
-                            {
-                              type: 'text',
-                              text: '▸ 顯示此訊息。'
-                            },
-                            {
-                              type: 'text',
-                              text: '@hs + 關鍵字',
-                              margin: 'md'
-                            },
-                            {
-                              type: 'text',
-                              text: '▸ 查詢背景含有關鍵字的古蹟。',
-                              wrap: true
-                            },
-                            {
-                              type: 'text',
-                              text: '@hb + 關鍵字',
-                              margin: 'md'
-                            },
-                            {
-                              type: 'text',
-                              text: '▸ 查詢背景含有關鍵字的歷史建築。',
-                              wrap: true
-                            }
-                          ],
-                          margin: 'sm'
-                        }
-                      ]
-                    },
-                    {
-                      type: 'box',
-                      layout: 'vertical',
-                      margin: 'lg',
-                      spacing: 'sm',
-                      contents: [
-                        {
-                          type: 'box',
-                          layout: 'baseline',
-                          spacing: 'sm',
-                          contents: [
-                            {
-                              type: 'icon',
-                              size: 'sm',
-                              url: 'https://i.imgur.com/62PSmkz.png'
-                            },
-                            {
-                              type: 'text',
-                              text: '發送位置訊息 ‒ 打卡',
-                              size: 'md',
-                              flex: 1,
-                              weight: 'bold'
-                            }
-                          ]
-                        },
-                        {
-                          type: 'box',
-                          layout: 'vertical',
-                          contents: [
-                            {
-                              type: 'text',
-                              text: '根據所在地或打卡位置查詢附近的古蹟。',
-                              margin: 'none',
-                              wrap: true
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          },
-          {
-            type: 'bubble',
-            hero: {
-              type: 'image',
-              url: 'https://i.imgur.com/lJh23xe.png',
-              size: 'full',
-              aspectMode: 'cover',
-              aspectRatio: '3:2'
-            },
-            body: {
-              type: 'box',
-              layout: 'vertical',
-              contents: [
-                {
-                  type: 'text',
-                  text: '歷古嚦咕 LI-GU',
-                  weight: 'bold',
-                  size: 'xl',
-                  align: 'center'
-                },
-                {
-                  type: 'text',
-                  size: 'sm',
-                  text: '常見問題 │ 𝐐 ＆ 𝐀',
-                  align: 'center'
-                },
-                {
-                  type: 'box',
-                  layout: 'vertical',
-                  margin: 'lg',
-                  spacing: 'sm',
-                  contents: [
-                    {
-                      type: 'box',
-                      layout: 'baseline',
-                      spacing: 'sm',
-                      contents: [
-                        {
-                          type: 'icon',
-                          size: 'sm',
-                          url: 'https://i.imgur.com/1fBK9ez.png'
-                        },
-                        {
-                          type: 'text',
-                          text: '找不到想要的資料？',
-                          size: 'md',
-                          flex: 1,
-                          weight: 'bold'
-                        }
-                      ]
-                    },
-                    {
-                      type: 'box',
-                      layout: 'vertical',
-                      contents: [
-                        {
-                          type: 'text',
-                          margin: 'xs',
-                          text: '❶ 關鍵字的準確度： ',
-                          wrap: true,
-                          decoration: 'none'
-                        },
-                        {
-                          type: 'text',
-                          text: '舉例：輸入「孔子廟」會出現「彰化孔子廟」的訊息，若要查詢位於台南的孔廟，則必須輸入「臺南孔子廟」。',
-                          wrap: true
-                        },
-                        {
-                          type: 'text',
-                          text: '❷ 關鍵字有無錯別字：',
-                          margin: 'md',
-                          decoration: 'none'
-                        },
-                        {
-                          type: 'text',
-                          text: '如：輸入「台中火車站」，會找不到符合的資料，輸入「臺中火車站」就能找到資料囉～',
-                          wrap: true
-                        },
-                        {
-                          type: 'text',
-                          text: '❸ 指令格式是否正確：',
-                          margin: 'md',
-                          decoration: 'none'
-                        },
-                        {
-                          type: 'text',
-                          text: '指令的正確格式為「@指令（空格）關鍵字」，且有大小寫的區別，例：「@hs 清朝」。',
-                          wrap: true
-                        }
-                      ],
-                      margin: 'sm'
-                    }
-                  ]
-                }
-              ]
-            }
-          },
-          {
-            type: 'bubble',
-            hero: {
-              type: 'image',
-              url: 'https://i.imgur.com/ti1XdWh.png',
-              size: 'full',
-              aspectMode: 'cover',
-              aspectRatio: '3:2'
-            },
-            body: {
-              type: 'box',
-              layout: 'vertical',
-              contents: [
-                {
-                  type: 'text',
-                  text: '歷古嚦咕 LI-GU',
-                  weight: 'bold',
-                  size: 'xl',
-                  align: 'center'
-                },
-                {
-                  type: 'text',
-                  size: 'sm',
-                  text: '小小知識 │ 𝘋𝘰 𝘺𝘰𝘶 𝘬𝘯𝘰𝘸 ?',
-                  align: 'center'
-                },
-                {
-                  type: 'box',
-                  layout: 'vertical',
-                  margin: 'lg',
-                  spacing: 'sm',
-                  contents: [
-                    {
-                      type: 'box',
-                      layout: 'baseline',
-                      spacing: 'sm',
-                      contents: [
-                        {
-                          type: 'icon',
-                          size: 'sm',
-                          url: 'https://i.imgur.com/lkrT3of.png'
-                        },
-                        {
-                          type: 'text',
-                          text: '古蹟與歷史建築的差別是？',
-                          size: 'md',
-                          flex: 1,
-                          weight: 'bold'
-                        }
-                      ]
-                    },
-                    {
-                      type: 'box',
-                      layout: 'vertical',
-                      contents: [
-                        {
-                          type: 'text',
-                          margin: 'xs',
-                          text: '兩者均指人類為生活需要所營建之具有歷史、文化價值之建造物及附屬設施群。但古蹟是強制性的保存，而歷史建築是獎勵性的保存。',
-                          wrap: true,
-                          decoration: 'none'
-                        }
-                      ],
-                      margin: 'sm'
-                    },
-                    {
-                      type: 'box',
-                      layout: 'baseline',
-                      spacing: 'sm',
-                      contents: [
-                        {
-                          type: 'icon',
-                          size: 'sm',
-                          url: 'https://i.imgur.com/KKjsylK.png'
-                        },
-                        {
-                          type: 'text',
-                          text: '全國古蹟日在什麼時候？',
-                          size: 'md',
-                          flex: 1,
-                          weight: 'bold'
-                        }
-                      ]
-                    },
-                    {
-                      type: 'box',
-                      layout: 'vertical',
-                      contents: [
-                        {
-                          type: 'text',
-                          margin: 'xs',
-                          text: '全國古蹟日訂於每年九月的第三個週末。緣起法國，目的在於提升民眾對文化豐富性和多樣性的認識，激發其對保護文化資產的興趣，並鼓勵文化包容。',
-                          wrap: true,
-                          decoration: 'none'
-                        }
-                      ],
-                      margin: 'sm'
-                    },
-                    {
-                      type: 'box',
-                      layout: 'baseline',
-                      spacing: 'sm',
-                      contents: [
-                        {
-                          type: 'icon',
-                          size: 'sm',
-                          url: 'https://i.imgur.com/FHGolOM.png'
-                        },
-                        {
-                          type: 'text',
-                          text: '全台古蹟最多的城市是哪裡？',
-                          size: 'md',
-                          flex: 1,
-                          weight: 'bold'
-                        }
-                      ]
-                    },
-                    {
-                      type: 'box',
-                      layout: 'vertical',
-                      contents: [
-                        {
-                          type: 'text',
-                          margin: 'xs',
-                          text: '你以為是臺南嗎？燈愣！是臺北。全台古蹟共 941 筆，其中臺北最多有 171 筆，其次為臺南 142 筆。',
-                          wrap: true,
-                          decoration: 'none'
-                        }
-                      ],
-                      margin: 'sm'
-                    }
-                  ]
-                }
-              ]
-            }
+            ]
           }
-        ]
-      }
+        },
+        {
+          "type": "bubble",
+          "hero": {
+            "type": "image",
+            "url": "https://i.imgur.com/lJh23xe.png",
+            "size": "full",
+            "aspectMode": "cover",
+            "aspectRatio": "3:2"
+          },
+          "body": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "歷古嚦咕 LI-GU",
+                "weight": "bold",
+                "size": "xl",
+                "align": "center"
+              },
+              {
+                "type": "text",
+                "size": "sm",
+                "text": "常見問題 │ 𝐐 ＆ 𝐀",
+                "align": "center"
+              },
+              {
+                "type": "box",
+                "layout": "vertical",
+                "margin": "lg",
+                "spacing": "sm",
+                "contents": [
+                  {
+                    "type": "box",
+                    "layout": "baseline",
+                    "spacing": "sm",
+                    "contents": [
+                      {
+                        "type": "icon",
+                        "size": "sm",
+                        "url": "https://i.imgur.com/1fBK9ez.png"
+                      },
+                      {
+                        "type": "text",
+                        "text": "找不到想要的資料？",
+                        "size": "md",
+                        "flex": 1,
+                        "weight": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                      {
+                        "type": "text",
+                        "margin": "xs",
+                        "text": "❶ 關鍵字的準確度： ",
+                        "wrap": true,
+                        "decoration": "none"
+                      },
+                      {
+                        "type": "text",
+                        "text": "舉例：輸入「孔子廟」會出現「彰化孔子廟」的訊息，若要查詢位於台南的孔廟，則必須輸入「臺南孔子廟」。",
+                        "wrap": true
+                      },
+                      {
+                        "type": "text",
+                        "text": "❷ 關鍵字有無錯別字：",
+                        "margin": "md",
+                        "decoration": "none"
+                      },
+                      {
+                        "type": "text",
+                        "text": "如：輸入「台中火車站」，會找不到符合的資料，輸入「臺中火車站」就能找到資料囉～",
+                        "wrap": true
+                      },
+                      {
+                        "type": "text",
+                        "text": "❸ 指令格式是否正確：",
+                        "margin": "md",
+                        "decoration": "none"
+                      },
+                      {
+                        "type": "text",
+                        "text": "指令的正確格式為「@指令（空格）關鍵字」，且有大小寫的區別，例：「@hs 清朝」。",
+                        "wrap": true
+                      }
+                    ],
+                    "margin": "sm"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "type": "bubble",
+          "hero": {
+            "type": "image",
+            "url": "https://i.imgur.com/ti1XdWh.png",
+            "size": "full",
+            "aspectMode": "cover",
+            "aspectRatio": "3:2"
+          },
+          "body": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "歷古嚦咕 LI-GU",
+                "weight": "bold",
+                "size": "xl",
+                "align": "center"
+              },
+              {
+                "type": "text",
+                "size": "sm",
+                "text": "小小知識 │ 𝘋𝘰 𝘺𝘰𝘶 𝘬𝘯𝘰𝘸 ?",
+                "align": "center"
+              },
+              {
+                "type": "box",
+                "layout": "vertical",
+                "margin": "lg",
+                "spacing": "sm",
+                "contents": [
+                  {
+                    "type": "box",
+                    "layout": "baseline",
+                    "spacing": "sm",
+                    "contents": [
+                      {
+                        "type": "icon",
+                        "size": "sm",
+                        "url": "https://i.imgur.com/lkrT3of.png"
+                      },
+                      {
+                        "type": "text",
+                        "text": "古蹟與歷史建築的差別是？",
+                        "size": "md",
+                        "flex": 1,
+                        "weight": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                      {
+                        "type": "text",
+                        "margin": "xs",
+                        "text": "兩者均指人類為生活需要所營建之具有歷史、文化價值之建造物及附屬設施群。但古蹟是強制性的保存，而歷史建築是獎勵性的保存。",
+                        "wrap": true,
+                        "decoration": "none"
+                      }
+                    ],
+                    "margin": "sm"
+                  },
+                  {
+                    "type": "box",
+                    "layout": "baseline",
+                    "spacing": "sm",
+                    "contents": [
+                      {
+                        "type": "icon",
+                        "size": "sm",
+                        "url": "https://i.imgur.com/KKjsylK.png"
+                      },
+                      {
+                        "type": "text",
+                        "text": "全國古蹟日在什麼時候？",
+                        "size": "md",
+                        "flex": 1,
+                        "weight": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                      {
+                        "type": "text",
+                        "margin": "xs",
+                        "text": "全國古蹟日訂於每年九月的第三個週末。緣起法國，目的在於提升民眾對文化豐富性和多樣性的認識，激發其對保護文化資產的興趣，並鼓勵文化包容。",
+                        "wrap": true,
+                        "decoration": "none"
+                      }
+                    ],
+                    "margin": "sm"
+                  },
+                  {
+                    "type": "box",
+                    "layout": "baseline",
+                    "spacing": "sm",
+                    "contents": [
+                      {
+                        "type": "icon",
+                        "size": "sm",
+                        "url": "https://i.imgur.com/FHGolOM.png"
+                      },
+                      {
+                        "type": "text",
+                        "text": "全台古蹟最多的城市是哪裡？",
+                        "size": "md",
+                        "flex": 1,
+                        "weight": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                      {
+                        "type": "text",
+                        "margin": "xs",
+                        "text": "你以為是臺南嗎？燈愣！是臺北。全台古蹟共 941 筆，其中臺北最多有 171 筆，其次為臺南 142 筆。",
+                        "wrap": true,
+                        "decoration": "none"
+                      }
+                    ],
+                    "margin": "sm"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
     }
 
     console.log('join')
@@ -903,420 +895,412 @@ bot.on('message', async event => {
       // @help
       if (text === '@help') {
         reply = {
-          type: 'flex',
-          altText: 'Flex',
-          contents: {
-            type: 'carousel',
-            contents: [
-              {
-                type: 'bubble',
-                hero: {
-                  type: 'image',
-                  url: 'https://i.imgur.com/pXBdhCI.png',
-                  size: 'full',
-                  aspectRatio: '3:2',
-                  aspectMode: 'cover',
-                  action: {
-                    type: 'uri',
-                    uri: 'http://linecorp.com/'
+          "type": "carousel",
+          "contents": [
+            {
+              "type": "bubble",
+              "hero": {
+                "type": "image",
+                "url": "https://i.imgur.com/pXBdhCI.png",
+                "size": "full",
+                "aspectRatio": "3:2",
+                "aspectMode": "cover"
+              },
+              "body": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "歷古嚦咕 LI-GU",
+                    "weight": "bold",
+                    "size": "xl",
+                    "align": "center"
+                  },
+                  {
+                    "type": "text",
+                    "size": "sm",
+                    "text": "歡迎加入 ❛歷古嚦咕 ❜  │ 使用說明",
+                    "align": "center"
+                  },
+                  {
+                    "type": "box",
+                    "layout": "vertical",
+                    "margin": "lg",
+                    "spacing": "sm",
+                    "contents": [
+                      {
+                        "type": "box",
+                        "layout": "baseline",
+                        "spacing": "sm",
+                        "contents": [
+                          {
+                            "type": "icon",
+                            "size": "sm",
+                            "url": "https://i.imgur.com/HFeV88n.png"
+                          },
+                          {
+                            "type": "text",
+                            "text": "輸入關鍵字",
+                            "size": "md",
+                            "flex": 1,
+                            "weight": "bold"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [
+                          {
+                            "type": "text",
+                            "text": "直接輸入想要查詢的古蹟或歷史建築名稱，例如：「赤嵌樓」。",
+                            "wrap": true
+                          }
+                        ]
+                      },
+                      {
+                        "type": "box",
+                        "layout": "vertical",
+                        "margin": "lg",
+                        "spacing": "sm",
+                        "contents": [
+                          {
+                            "type": "box",
+                            "layout": "baseline",
+                            "spacing": "sm",
+                            "contents": [
+                              {
+                                "type": "icon",
+                                "size": "sm",
+                                "url": "https://i.imgur.com/0Ymtg9N.png"
+                              },
+                              {
+                                "type": "text",
+                                "text": "輸入指令",
+                                "size": "md",
+                                "flex": 1,
+                                "weight": "bold"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                              {
+                                "type": "text",
+                                "text": "@help",
+                                "margin": "none",
+                                "decoration": "none"
+                              },
+                              {
+                                "type": "text",
+                                "text": "▸ 顯示此訊息。"
+                              },
+                              {
+                                "type": "text",
+                                "text": "@hs + 關鍵字",
+                                "margin": "md"
+                              },
+                              {
+                                "type": "text",
+                                "text": "▸ 查詢背景含有關鍵字的古蹟。",
+                                "wrap": true
+                              },
+                              {
+                                "type": "text",
+                                "text": "@hb + 關鍵字",
+                                "margin": "md"
+                              },
+                              {
+                                "type": "text",
+                                "text": "▸ 查詢背景含有關鍵字的歷史建築。",
+                                "wrap": true
+                              }
+                            ],
+                            "margin": "sm"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "box",
+                        "layout": "vertical",
+                        "margin": "lg",
+                        "spacing": "sm",
+                        "contents": [
+                          {
+                            "type": "box",
+                            "layout": "baseline",
+                            "spacing": "sm",
+                            "contents": [
+                              {
+                                "type": "icon",
+                                "size": "sm",
+                                "url": "https://i.imgur.com/62PSmkz.png"
+                              },
+                              {
+                                "type": "text",
+                                "text": "發送位置資訊 ‒ 打卡",
+                                "size": "md",
+                                "flex": 1,
+                                "weight": "bold"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                              {
+                                "type": "text",
+                                "text": "根據所在地或打卡位置查詢附近的古蹟。",
+                                "margin": "none",
+                                "wrap": true
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
                   }
-                },
-                body: {
-                  type: 'box',
-                  layout: 'vertical',
-                  contents: [
-                    {
-                      type: 'text',
-                      text: '歷古嚦咕 LI-GU',
-                      weight: 'bold',
-                      size: 'xl',
-                      align: 'center'
-                    },
-                    {
-                      type: 'text',
-                      size: 'sm',
-                      text: '歡迎加入 ❛歷古嚦咕 ❜  │ 使用說明',
-                      align: 'center'
-                    },
-                    {
-                      type: 'box',
-                      layout: 'vertical',
-                      margin: 'lg',
-                      spacing: 'sm',
-                      contents: [
-                        {
-                          type: 'box',
-                          layout: 'baseline',
-                          spacing: 'sm',
-                          contents: [
-                            {
-                              type: 'icon',
-                              size: 'sm',
-                              url: 'https://i.imgur.com/HFeV88n.png'
-                            },
-                            {
-                              type: 'text',
-                              text: '輸入關鍵字',
-                              size: 'md',
-                              flex: 1,
-                              weight: 'bold'
-                            }
-                          ]
-                        },
-                        {
-                          type: 'box',
-                          layout: 'vertical',
-                          contents: [
-                            {
-                              type: 'text',
-                              text: '直接輸入想要查詢的古蹟或歷史建築名稱，例如：「赤嵌樓」。',
-                              wrap: true
-                            }
-                          ]
-                        },
-                        {
-                          type: 'box',
-                          layout: 'vertical',
-                          margin: 'lg',
-                          spacing: 'sm',
-                          contents: [
-                            {
-                              type: 'box',
-                              layout: 'baseline',
-                              spacing: 'sm',
-                              contents: [
-                                {
-                                  type: 'icon',
-                                  size: 'sm',
-                                  url: 'https://i.imgur.com/0Ymtg9N.png'
-                                },
-                                {
-                                  type: 'text',
-                                  text: '輸入指令',
-                                  size: 'md',
-                                  flex: 1,
-                                  weight: 'bold'
-                                }
-                              ]
-                            },
-                            {
-                              type: 'box',
-                              layout: 'vertical',
-                              contents: [
-                                {
-                                  type: 'text',
-                                  text: '@help',
-                                  margin: 'none',
-                                  decoration: 'none'
-                                },
-                                {
-                                  type: 'text',
-                                  text: '▸ 顯示此訊息。'
-                                },
-                                {
-                                  type: 'text',
-                                  text: '@hs + 關鍵字',
-                                  margin: 'md'
-                                },
-                                {
-                                  type: 'text',
-                                  text: '▸ 查詢背景含有關鍵字的古蹟。',
-                                  wrap: true
-                                },
-                                {
-                                  type: 'text',
-                                  text: '@hb + 關鍵字',
-                                  margin: 'md'
-                                },
-                                {
-                                  type: 'text',
-                                  text: '▸ 查詢背景含有關鍵字的歷史建築。',
-                                  wrap: true
-                                }
-                              ],
-                              margin: 'sm'
-                            }
-                          ]
-                        },
-                        {
-                          type: 'box',
-                          layout: 'vertical',
-                          margin: 'lg',
-                          spacing: 'sm',
-                          contents: [
-                            {
-                              type: 'box',
-                              layout: 'baseline',
-                              spacing: 'sm',
-                              contents: [
-                                {
-                                  type: 'icon',
-                                  size: 'sm',
-                                  url: 'https://i.imgur.com/62PSmkz.png'
-                                },
-                                {
-                                  type: 'text',
-                                  text: '發送位置訊息 ‒ 打卡',
-                                  size: 'md',
-                                  flex: 1,
-                                  weight: 'bold'
-                                }
-                              ]
-                            },
-                            {
-                              type: 'box',
-                              layout: 'vertical',
-                              contents: [
-                                {
-                                  type: 'text',
-                                  text: '根據所在地或打卡位置查詢附近的古蹟。',
-                                  margin: 'none',
-                                  wrap: true
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              },
-              {
-                type: 'bubble',
-                hero: {
-                  type: 'image',
-                  url: 'https://i.imgur.com/lJh23xe.png',
-                  size: 'full',
-                  aspectMode: 'cover',
-                  aspectRatio: '3:2'
-                },
-                body: {
-                  type: 'box',
-                  layout: 'vertical',
-                  contents: [
-                    {
-                      type: 'text',
-                      text: '歷古嚦咕 LI-GU',
-                      weight: 'bold',
-                      size: 'xl',
-                      align: 'center'
-                    },
-                    {
-                      type: 'text',
-                      size: 'sm',
-                      text: '常見問題 │ 𝐐 ＆ 𝐀',
-                      align: 'center'
-                    },
-                    {
-                      type: 'box',
-                      layout: 'vertical',
-                      margin: 'lg',
-                      spacing: 'sm',
-                      contents: [
-                        {
-                          type: 'box',
-                          layout: 'baseline',
-                          spacing: 'sm',
-                          contents: [
-                            {
-                              type: 'icon',
-                              size: 'sm',
-                              url: 'https://i.imgur.com/1fBK9ez.png'
-                            },
-                            {
-                              type: 'text',
-                              text: '找不到想要的資料？',
-                              size: 'md',
-                              flex: 1,
-                              weight: 'bold'
-                            }
-                          ]
-                        },
-                        {
-                          type: 'box',
-                          layout: 'vertical',
-                          contents: [
-                            {
-                              type: 'text',
-                              margin: 'xs',
-                              text: '❶ 關鍵字的準確度： ',
-                              wrap: true,
-                              decoration: 'none'
-                            },
-                            {
-                              type: 'text',
-                              text: '舉例：輸入「孔子廟」會出現「彰化孔子廟」的訊息，若要查詢位於台南的孔廟，則必須輸入「臺南孔子廟」。',
-                              wrap: true
-                            },
-                            {
-                              type: 'text',
-                              text: '❷ 關鍵字有無錯別字：',
-                              margin: 'md',
-                              decoration: 'none'
-                            },
-                            {
-                              type: 'text',
-                              text: '如：輸入「台中火車站」，會找不到符合的資料，輸入「臺中火車站」就能找到資料囉～',
-                              wrap: true
-                            },
-                            {
-                              type: 'text',
-                              text: '❸ 指令格式是否正確：',
-                              margin: 'md',
-                              decoration: 'none'
-                            },
-                            {
-                              type: 'text',
-                              text: '指令的正確格式為「@指令（空格）關鍵字」，且有大小寫的區別，例：「@hs 清朝」。',
-                              wrap: true
-                            }
-                          ],
-                          margin: 'sm'
-                        }
-                      ]
-                    }
-                  ]
-                }
-              },
-              {
-                type: 'bubble',
-                hero: {
-                  type: 'image',
-                  url: 'https://i.imgur.com/ti1XdWh.png',
-                  size: 'full',
-                  aspectMode: 'cover',
-                  aspectRatio: '3:2'
-                },
-                body: {
-                  type: 'box',
-                  layout: 'vertical',
-                  contents: [
-                    {
-                      type: 'text',
-                      text: '歷古嚦咕 LI-GU',
-                      weight: 'bold',
-                      size: 'xl',
-                      align: 'center'
-                    },
-                    {
-                      type: 'text',
-                      size: 'sm',
-                      text: '小小知識 │ 𝘋𝘰 𝘺𝘰𝘶 𝘬𝘯𝘰𝘸 ?',
-                      align: 'center'
-                    },
-                    {
-                      type: 'box',
-                      layout: 'vertical',
-                      margin: 'lg',
-                      spacing: 'sm',
-                      contents: [
-                        {
-                          type: 'box',
-                          layout: 'baseline',
-                          spacing: 'sm',
-                          contents: [
-                            {
-                              type: 'icon',
-                              size: 'sm',
-                              url: 'https://i.imgur.com/lkrT3of.png'
-                            },
-                            {
-                              type: 'text',
-                              text: '古蹟與歷史建築的差別是？',
-                              size: 'md',
-                              flex: 1,
-                              weight: 'bold'
-                            }
-                          ]
-                        },
-                        {
-                          type: 'box',
-                          layout: 'vertical',
-                          contents: [
-                            {
-                              type: 'text',
-                              margin: 'xs',
-                              text: '兩者均指人類為生活需要所營建之具有歷史、文化價值之建造物及附屬設施群。但古蹟是強制性的保存，而歷史建築是獎勵性的保存。',
-                              wrap: true,
-                              decoration: 'none'
-                            }
-                          ],
-                          margin: 'sm'
-                        },
-                        {
-                          type: 'box',
-                          layout: 'baseline',
-                          spacing: 'sm',
-                          contents: [
-                            {
-                              type: 'icon',
-                              size: 'sm',
-                              url: 'https://i.imgur.com/KKjsylK.png'
-                            },
-                            {
-                              type: 'text',
-                              text: '全國古蹟日在什麼時候？',
-                              size: 'md',
-                              flex: 1,
-                              weight: 'bold'
-                            }
-                          ]
-                        },
-                        {
-                          type: 'box',
-                          layout: 'vertical',
-                          contents: [
-                            {
-                              type: 'text',
-                              margin: 'xs',
-                              text: '全國古蹟日訂於每年九月的第三個週末。緣起法國，目的在於提升民眾對文化豐富性和多樣性的認識，激發其對保護文化資產的興趣，並鼓勵文化包容。',
-                              wrap: true,
-                              decoration: 'none'
-                            }
-                          ],
-                          margin: 'sm'
-                        },
-                        {
-                          type: 'box',
-                          layout: 'baseline',
-                          spacing: 'sm',
-                          contents: [
-                            {
-                              type: 'icon',
-                              size: 'sm',
-                              url: 'https://i.imgur.com/FHGolOM.png'
-                            },
-                            {
-                              type: 'text',
-                              text: '全台古蹟最多的城市是哪裡？',
-                              size: 'md',
-                              flex: 1,
-                              weight: 'bold'
-                            }
-                          ]
-                        },
-                        {
-                          type: 'box',
-                          layout: 'vertical',
-                          contents: [
-                            {
-                              type: 'text',
-                              margin: 'xs',
-                              text: '你以為是臺南嗎？燈愣！是臺北。全台古蹟共 941 筆，其中臺北最多有 171 筆，其次為臺南 142 筆。',
-                              wrap: true,
-                              decoration: 'none'
-                            }
-                          ],
-                          margin: 'sm'
-                        }
-                      ]
-                    }
-                  ]
-                }
+                ]
               }
-            ]
-          }
+            },
+            {
+              "type": "bubble",
+              "hero": {
+                "type": "image",
+                "url": "https://i.imgur.com/lJh23xe.png",
+                "size": "full",
+                "aspectMode": "cover",
+                "aspectRatio": "3:2"
+              },
+              "body": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "歷古嚦咕 LI-GU",
+                    "weight": "bold",
+                    "size": "xl",
+                    "align": "center"
+                  },
+                  {
+                    "type": "text",
+                    "size": "sm",
+                    "text": "常見問題 │ 𝐐 ＆ 𝐀",
+                    "align": "center"
+                  },
+                  {
+                    "type": "box",
+                    "layout": "vertical",
+                    "margin": "lg",
+                    "spacing": "sm",
+                    "contents": [
+                      {
+                        "type": "box",
+                        "layout": "baseline",
+                        "spacing": "sm",
+                        "contents": [
+                          {
+                            "type": "icon",
+                            "size": "sm",
+                            "url": "https://i.imgur.com/1fBK9ez.png"
+                          },
+                          {
+                            "type": "text",
+                            "text": "找不到想要的資料？",
+                            "size": "md",
+                            "flex": 1,
+                            "weight": "bold"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [
+                          {
+                            "type": "text",
+                            "margin": "xs",
+                            "text": "❶ 關鍵字的準確度： ",
+                            "wrap": true,
+                            "decoration": "none"
+                          },
+                          {
+                            "type": "text",
+                            "text": "舉例：輸入「孔子廟」會出現「彰化孔子廟」的訊息，若要查詢位於台南的孔廟，則必須輸入「臺南孔子廟」。",
+                            "wrap": true
+                          },
+                          {
+                            "type": "text",
+                            "text": "❷ 關鍵字有無錯別字：",
+                            "margin": "md",
+                            "decoration": "none"
+                          },
+                          {
+                            "type": "text",
+                            "text": "如：輸入「台中火車站」，會找不到符合的資料，輸入「臺中火車站」就能找到資料囉～",
+                            "wrap": true
+                          },
+                          {
+                            "type": "text",
+                            "text": "❸ 指令格式是否正確：",
+                            "margin": "md",
+                            "decoration": "none"
+                          },
+                          {
+                            "type": "text",
+                            "text": "指令的正確格式為「@指令（空格）關鍵字」，且有大小寫的區別，例：「@hs 清朝」。",
+                            "wrap": true
+                          }
+                        ],
+                        "margin": "sm"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "type": "bubble",
+              "hero": {
+                "type": "image",
+                "url": "https://i.imgur.com/ti1XdWh.png",
+                "size": "full",
+                "aspectMode": "cover",
+                "aspectRatio": "3:2"
+              },
+              "body": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "歷古嚦咕 LI-GU",
+                    "weight": "bold",
+                    "size": "xl",
+                    "align": "center"
+                  },
+                  {
+                    "type": "text",
+                    "size": "sm",
+                    "text": "小小知識 │ 𝘋𝘰 𝘺𝘰𝘶 𝘬𝘯𝘰𝘸 ?",
+                    "align": "center"
+                  },
+                  {
+                    "type": "box",
+                    "layout": "vertical",
+                    "margin": "lg",
+                    "spacing": "sm",
+                    "contents": [
+                      {
+                        "type": "box",
+                        "layout": "baseline",
+                        "spacing": "sm",
+                        "contents": [
+                          {
+                            "type": "icon",
+                            "size": "sm",
+                            "url": "https://i.imgur.com/lkrT3of.png"
+                          },
+                          {
+                            "type": "text",
+                            "text": "古蹟與歷史建築的差別是？",
+                            "size": "md",
+                            "flex": 1,
+                            "weight": "bold"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [
+                          {
+                            "type": "text",
+                            "margin": "xs",
+                            "text": "兩者均指人類為生活需要所營建之具有歷史、文化價值之建造物及附屬設施群。但古蹟是強制性的保存，而歷史建築是獎勵性的保存。",
+                            "wrap": true,
+                            "decoration": "none"
+                          }
+                        ],
+                        "margin": "sm"
+                      },
+                      {
+                        "type": "box",
+                        "layout": "baseline",
+                        "spacing": "sm",
+                        "contents": [
+                          {
+                            "type": "icon",
+                            "size": "sm",
+                            "url": "https://i.imgur.com/KKjsylK.png"
+                          },
+                          {
+                            "type": "text",
+                            "text": "全國古蹟日在什麼時候？",
+                            "size": "md",
+                            "flex": 1,
+                            "weight": "bold"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [
+                          {
+                            "type": "text",
+                            "margin": "xs",
+                            "text": "全國古蹟日訂於每年九月的第三個週末。緣起法國，目的在於提升民眾對文化豐富性和多樣性的認識，激發其對保護文化資產的興趣，並鼓勵文化包容。",
+                            "wrap": true,
+                            "decoration": "none"
+                          }
+                        ],
+                        "margin": "sm"
+                      },
+                      {
+                        "type": "box",
+                        "layout": "baseline",
+                        "spacing": "sm",
+                        "contents": [
+                          {
+                            "type": "icon",
+                            "size": "sm",
+                            "url": "https://i.imgur.com/FHGolOM.png"
+                          },
+                          {
+                            "type": "text",
+                            "text": "全台古蹟最多的城市是哪裡？",
+                            "size": "md",
+                            "flex": 1,
+                            "weight": "bold"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [
+                          {
+                            "type": "text",
+                            "margin": "xs",
+                            "text": "你以為是臺南嗎？燈愣！是臺北。全台古蹟共 941 筆，其中臺北最多有 171 筆，其次為臺南 142 筆。",
+                            "wrap": true,
+                            "decoration": "none"
+                          }
+                        ],
+                        "margin": "sm"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
         }
       }
     }
