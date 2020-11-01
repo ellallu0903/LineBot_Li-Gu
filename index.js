@@ -217,7 +217,7 @@ bot.on('follow', async event => {
                             },
                             {
                               type: 'text',
-                              text: '發送位置訊息 ‒ 打卡',
+                              text: '發送位置資訊 ‒ 打卡',
                               size: 'md',
                               flex: 1,
                               weight: 'bold'
@@ -1048,7 +1048,7 @@ bot.on('message', async event => {
                                 },
                                 {
                                   type: 'text',
-                                  text: '發送位置訊息 ‒ 打卡',
+                                  text: '發送位置資訊 ‒ 打卡',
                                   size: 'md',
                                   flex: 1,
                                   weight: 'bold'
