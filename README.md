@@ -1,9 +1,5 @@
 # LineBot - 歷古嚦咕 Li-Gu
 
-<div style="width:150px;margin:auto">
-<img src="https://i.imgur.com/4bn3T9U.png">
-</div>
-
 <h3 align=center> ID：@155rupld </h3>
 
 <div align=center>
