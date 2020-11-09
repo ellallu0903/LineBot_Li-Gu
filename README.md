@@ -1,7 +1,6 @@
 # LineBot - 歷古嚦咕 Li-Gu
 
-<!-- 這裡要放 logo -->
-<div style="width:50%;margin:auto">
+<div style="width:150px;margin:auto">
 <img src="https://i.imgur.com/4bn3T9U.png">
 </div>
 
@@ -24,10 +23,11 @@
 - 使用說明：
 
   - 加入好友後，會自動發送使用說明（如下方左圖）。
-  - 目前共有三種功能，分別為輸入關鍵字、輸入指令、發送位置資訊（打卡）。
-    <br>
+  - 目前共有三種功能，分別為輸入關鍵字、輸入指令、發送位置資訊（打卡）。 
+  　　
+  　
   <div align=center>
-  <img src="https://i.imgur.com/yBUBqAt.png">
+  <img src="https://i.imgur.com/yggbUIC.png">
   </div>
 
 ![分隔線](https://i.imgur.com/tqmMwEG.png)
